@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="GET" action="{% url 'post_list' %}">
+    <input type="text" name="search" placeholder="Search...">
+    <button type="submit">Search</button>
+</form>
+{% for c in posts %}
+    <p>{{ c.title }}</p>
+{% endfor %}
+</body>
+</html>
